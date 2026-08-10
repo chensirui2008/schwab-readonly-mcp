@@ -5,11 +5,13 @@
 ## 已提供工具
 
 - `get_quotes`：美股报价及基本面字段
-- `get_price_history`：分钟或日线 OHLCV
+- `get_price_history`：分钟、日、周或月线 OHLCV；支持 Schwab 允许范围内的完整 ISO 时间区间和盘前盘后
+- `get_technical_indicators`：本地基于 Schwab K 线计算 SMA20、EMA20、RSI14、MACD(12,26,9)、布林带(20,2)、ATR14 和分交易日 VWAP
+- `get_fundamentals`：Schwab 可用的发行人基本面字段
 - `get_option_chain`、`get_market_hours`、`get_movers`
 - `get_accounts`、`get_account`、`get_transactions`
 
-报价是否属于实时数据取决于 Schwab 账户及交易所行情授权；MCP 不会把延时行情误标为实时。
+报价是否属于实时数据取决于 Schwab 账户及交易所行情授权；MCP 不会把延时行情误标为实时。K 线的最长可获取范围和粒度由 Schwab API 限制；财务报表、逐季历史财务、预期和研报并不包含在 Schwab 基本面字段内。
 
 ## 前置条件
 
