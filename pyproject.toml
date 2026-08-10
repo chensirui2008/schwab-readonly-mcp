@@ -13,6 +13,12 @@ dependencies = [
   "mcp>=1.10,<2",
 ]
 
+[dependency-groups]
+dev = [
+  "pytest>=8.0,<9",
+  "ruff>=0.6,<0.7",
+]
+
 [project.scripts]
 schwab-readonly-mcp = "schwab_readonly_mcp.cli:main"
 
